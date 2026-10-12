@@ -1,13 +1,379 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yukun Yan | Academic Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Yukun Yan, theoretical physics researcher working on holography, superfluid dynamics, and quantum turbulence.">
+  <title>Yukun Yan | Theoretical Physics</title>
+
+  <style>
+    :root {
+      --text: #252525;
+      --muted: #666;
+      --accent: #285b85;
+      --line: #e5e5e5;
+      --background: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(100% - 40px, 1040px);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 58px;
+      padding-top: 54px;
+      padding-bottom: 72px;
+    }
+
+    aside {
+      font-size: 14px;
+    }
+
+    .avatar {
+      width: 148px;
+      height: 148px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f7f8fa;
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    aside h1 {
+      font-size: 25px;
+      line-height: 1.3;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .position {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .side-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 20px;
+    }
+
+    .side-links a {
+      overflow-wrap: anywhere;
+    }
+
+    main section {
+      margin-bottom: 38px;
+      scroll-margin-top: 24px;
+    }
+
+    main h2 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    main p {
+      margin: 0 0 14px;
+    }
+
+    .research-list {
+      padding-left: 21px;
+      margin: 8px 0;
+    }
+
+    .research-list li {
+      padding-left: 3px;
+      margin-bottom: 5px;
+    }
+
+    .publication {
+      margin-bottom: 22px;
+    }
+
+    .publication-title {
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .authors {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .journal {
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .paper-links {
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .paper-links a {
+      margin-right: 12px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(100% - 32px, 600px);
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        gap: 10px 17px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-top: 30px;
+      }
+
+      .avatar {
+        width: 112px;
+        height: 112px;
+      }
+
+      aside {
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Yukun Yan</h1>
-  <p>Theoretical Physics Researcher</p>
-  <p>Welcome to my academic homepage.</p>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">Yukun Yan</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <aside>
+      <div class="avatar">Your photo</div>
+
+      <h1>Yukun Yan</h1>
+      <div class="position">
+        Theoretical Physics<br>
+        University of Chinese Academy of Sciences
+      </div>
+
+      <p>
+        My research focuses on theoretical and computational
+        physics, with an emphasis on holography and quantum fluids.
+      </p>
+
+      <div class="side-links">
+        <a href="https://github.com/ykyanphys">GitHub</a>
+        <a href="https://arxiv.org/search/?searchtype=author&query=Yan,+Y">arXiv search</a>
+        <a href="#contact">Email</a>
+        <a href="cv.pdf">Curriculum Vitae (PDF)</a>
+      </div>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Welcome to my academic homepage. I am interested in
+          strongly coupled quantum systems and their nonequilibrium
+          dynamics, particularly in holographic approaches to
+          superfluidity and quantum turbulence.
+        </p>
+        <p>
+          My work combines analytical methods and large-scale
+          numerical simulations to investigate collective
+          excitations, vortex dynamics, and energy transport.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <ul class="research-list">
+          <li>Gauge/gravity duality and holographic quantum matter</li>
+          <li>Holographic superfluids and vortex dynamics</li>
+          <li>Quantum turbulence and wave turbulence</li>
+          <li>Nonequilibrium dynamics and dissipative processes</li>
+          <li>Scientific computing and machine learning in physics</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="publication">
+          <div class="publication-title">
+            Holographic dissipation prefers the Landau over the Keldysh form
+          </div>
+          <div class="authors">
+            Please verify the complete author list.
+          </div>
+          <div class="journal">Physical Review D 107, L121901 (2023)</div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1103/PhysRevD.107.L121901">Journal</a>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            Splitting of doubly quantized vortices in holographic superfluids
+          </div>
+          <div class="authors">
+            Please verify the exact title and complete author list.
+          </div>
+          <div class="journal">Journal of High Energy Physics (2023)</div>
+          <div class="paper-links">
+            <a href="https://inspirehep.net/">Search on INSPIRE</a>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            Neural ODEs for holographic transport models without translation symmetry
+          </div>
+          <div class="authors">
+            Please verify the complete author list.
+          </div>
+          <div class="journal">arXiv:2401.09946</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2401.09946">arXiv</a>
+          </div>
+        </div>
+
+        <p class="note">
+          A complete publication list and additional preprints
+          will be added here.
+        </p>
+      </section>
+
+      <section id="experience">
+        <h2>Academic Experience</h2>
+        <p>
+          <strong>Education</strong><br>
+          University of Chinese Academy of Sciences<br>
+          Ph.D. in Theoretical Physics
+        </p>
+        <p class="note">
+          Update this section with your actual dates, current
+          position, previous appointments, and collaborators.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:YOUR_EMAIL@example.com">
+            YOUR_EMAIL@example.com
+          </a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/ykyanphys">
+            github.com/ykyanphys
+          </a>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      © 2026 Yukun Yan · Hosted on GitHub Pages
+    </div>
+  </footer>
 </body>
 </html>

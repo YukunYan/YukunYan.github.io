@@ -150,33 +150,66 @@
       margin-bottom: 5px;
     }
 
-    .publication {
-      margin-bottom: 22px;
-    }
+    /* Publication list */
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    .publication-title {
-      font-weight: 600;
-      line-height: 1.55;
-    }
+.publication {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
 
-    .authors {
-      color: var(--muted);
-      font-size: 14px;
-    }
+.publication-image {
+  display: block;
+  width: 180px;
+  height: 125px;
+  object-fit: contain;
+  background: #f7f8fa;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
 
-    .journal {
-      font-size: 14px;
-      font-style: italic;
-    }
+.publication-content {
+  min-width: 0;
+}
 
-    .paper-links {
-      font-size: 13px;
-      margin-top: 3px;
-    }
+.publication-title {
+  margin: 0 0 8px;
+  font-weight: 600;
+  line-height: 1.5;
+}
 
-    .paper-links a {
-      margin-right: 12px;
-    }
+.authors {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.paper-links {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 600px) {
+  .publication {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .publication-image {
+    width: 110px;
+    height: 90px;
+  }
+}
 
     .note {
       color: var(--muted);
@@ -301,102 +334,169 @@
       </section>
 
       <section id="publications">
-        <h2>Publications</h2>
+  <h2>Publications</h2>
 
-        <div class="publication">
-          <div class="publication-title">
-            Splitting Dynamics of Multiply Quantized Vortices in Holographic Superfluid of Finite Temperature
-          </div>
-          <div class="authors">Shanquan Lan, Xin Li, jiexiong Mo, Yu Tian, Yu-Kun Yan, Hongbao Zhang
-          </div>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2609.08831/">arXiv: 2609.08831</a>
-          </div>
+  <div class="publication-list">
+
+    <div class="publication">
+      <img class="publication-image"
+           src="images/multiply-quantized-vortices.png"
+           alt="Figure from Splitting Dynamics of Multiply Quantized Vortices">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Splitting Dynamics of Multiply Quantized Vortices in Holographic Superfluid of Finite Temperature
         </div>
-
-        <div class="publication">
-          <div class="publication-title">
-            Transition of vortex dipole dynamics in holographic superfluids
-          </div>
-          <div class="authors">Yu-Kun Yan, Shanquan Lan, Yu Tian, Hongbao Zhang
-          </div>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2605.19348">arXiv: 2605.19348</a>
-          </div>
+        <div class="authors">
+          Shanquan Lan, Xin Li, jiexiong Mo, Yu Tian, Yu-Kun Yan, Hongbao Zhang
         </div>
-
-
-        <div class="publication">
-          <div class="publication-title">
-            Quaternionic lifting of spherical Clebsch maps in helical flows
-          </div>
-          <div class="authors">Yanru Wang,  Lei Pang, Zhenkun Li, Yu-Kun Yan, Linlin Kang,
-Qinghai Zhang, and Shiying Xiong
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1007/s11433-026-2992-9"> Sci. China-Phys. Mech. Astron. 69, 284711 (2026)</a>
-          </div>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2609.08831/">arXiv: 2609.08831</a>
         </div>
+      </div>
+    </div>
 
+    <div class="publication">
+      <img class="publication-image"
+           src="images/vortex-dipole-transition.png"
+           alt="Figure from Transition of vortex dipole dynamics">
 
-       <div class="publication">
-          <div class="publication-title">
-            Vortex shedding patterns in holographic superfluids at finite temperature
-          </div>
-          <div class="authors">Peng Yang, Shanquan Lan, Yu Tian, Yu-Kun Yan, Hongbao Zhang
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1103/lw69-gp12">Phys. Rev. D 112, 026032 (2025)</a>
-          </div>
+      <div class="publication-content">
+        <div class="publication-title">
+          Transition of vortex dipole dynamics in holographic superfluids
         </div>
-
-        <div class="publication">
-          <div class="publication-title">
-            Neural ODEs for holographic transport models without translation symmetry
-          </div>
-          <div class="authors">Gu-Zhuo Fan, Yu-Kun Yan, Shao-Feng Wu
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1140/epjc/s10052-025-13759-0">Eur.Phys.J.C 85 (2025)</a>
-          </div>
+        <div class="authors">
+          Yu-Kun Yan, Shanquan Lan, Yu Tian, Hongbao Zhang
         </div>
-
-        <div class="publication">
-          <div class="publication-title">
-            Splitting of doubly quantized vortices in holographic superfluids
-          </div>
-          <div class="authors">Shanquan Lan, Xin Li, jiexiong Mo, Yu Tian, Yu-Kun Yan, Hongbao Zhang
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1007/JHEP05(2023)223/">JHEP (2023)</a>
-          </div>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2605.19348">arXiv: 2605.19348</a>
         </div>
+      </div>
+    </div>
 
-        <div class="publication">
-          <div class="publication-title">
-            Holographic dissipation prefers the Landau over the Keldysh form
-          </div>
-          <div class="authors">Yu-Kun Yan, Shanquan Lan, Yu Tian, Peng Yang, Shunhui Yao, Hongbao Zhang
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1103/PhysRevD.107.L121901">Phys. Rev. D 107, L121901 (2023)</a>
-          </div>
+    <div class="publication">
+      <img class="publication-image"
+           src="images/quaternionic-clebsch-maps.png"
+           alt="Figure from Quaternionic lifting of spherical Clebsch maps">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Quaternionic lifting of spherical Clebsch maps in helical flows
         </div>
-
-        <div class="publication">
-          <div class="publication-title">
-            Deep learning black hole metrics from shear viscosity
-          </div>
-          <div class="authors">
-            Yu-Kun Yan, Shao-Feng Wu, Xian-Hui Ge, Yu Tian
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1103/PhysRevD.102.101902">Phys. Rev. D 102, 101902(R) (2020)</a>
-          </div>
+        <div class="authors">
+          Yanru Wang, Lei Pang, Zhenkun Li, Yu-Kun Yan, Linlin Kang,
+          Qinghai Zhang, and Shiying Xiong
         </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1007/s11433-026-2992-9">
+            Sci. China-Phys. Mech. Astron. 69, 284711 (2026)
+          </a>
+        </div>
+      </div>
+    </div>
 
-        
-      </section>
+    <div class="publication">
+      <img class="publication-image"
+           src="images/vortex-shedding.png"
+           alt="Figure from Vortex shedding patterns in holographic superfluids">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Vortex shedding patterns in holographic superfluids at finite temperature
+        </div>
+        <div class="authors">
+          Peng Yang, Shanquan Lan, Yu Tian, Yu-Kun Yan, Hongbao Zhang
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1103/lw69-gp12">
+            Phys. Rev. D 112, 026032 (2025)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="publication-image"
+           src="images/neural-odes.png"
+           alt="Figure from Neural ODEs for holographic transport models">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Neural ODEs for holographic transport models without translation symmetry
+        </div>
+        <div class="authors">
+          Gu-Zhuo Fan, Yu-Kun Yan, Shao-Feng Wu
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1140/epjc/s10052-025-13759-0">
+            Eur. Phys. J. C 85 (2025)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="publication-image"
+           src="images/doubly-quantized-vortices.png"
+           alt="Figure from Splitting of doubly quantized vortices">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Splitting of doubly quantized vortices in holographic superfluids
+        </div>
+        <div class="authors">
+          Shanquan Lan, Xin Li, jiexiong Mo, Yu Tian, Yu-Kun Yan, Hongbao Zhang
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1007/JHEP05(2023)223/">
+            JHEP (2023)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="publication-image"
+           src="images/landau-dissipation.png"
+           alt="Figure from Holographic dissipation prefers the Landau over the Keldysh form">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Holographic dissipation prefers the Landau over the Keldysh form
+        </div>
+        <div class="authors">
+          Yu-Kun Yan, Shanquan Lan, Yu Tian, Peng Yang, Shunhui Yao, Hongbao Zhang
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1103/PhysRevD.107.L121901">
+            Phys. Rev. D 107, L121901 (2023)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="publication-image"
+           src="images/deep-learning-black-holes.png"
+           alt="Figure from Deep learning black hole metrics from shear viscosity">
+
+      <div class="publication-content">
+        <div class="publication-title">
+          Deep learning black hole metrics from shear viscosity
+        </div>
+        <div class="authors">
+          Yu-Kun Yan, Shao-Feng Wu, Xian-Hui Ge, Yu Tian
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1103/PhysRevD.102.101902">
+            Phys. Rev. D 102, 101902(R) (2020)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       
     </main>

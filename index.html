@@ -91,18 +91,14 @@
     }
 
     .avatar {
-      width: 148px;
-      height: 148px;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f7f8fa;
-      color: #777;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 22px;
+}
 
     aside h1 {
       font-size: 25px;
@@ -242,7 +238,10 @@
 
   <div class="container layout">
     <aside>
-      <div class="avatar">photo.png</div>
+      <img
+  class="avatar"
+  src="photo.png"
+  alt="Portrait of Yukun Yan">
 
       <h1>Yukun Yan (严禹坤)</h1>
       <div class="position">
